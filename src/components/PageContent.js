@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {PersonalEntry} from "./PersonalEntry";
 import {LoadingSpinner} from "./LoadingSpinner";
-import Router from './TabRouting/Router'
 import IntroText from './IntroText'
 
 class PageContent extends Component {
@@ -16,10 +15,9 @@ class PageContent extends Component {
         <div className="content">
           <h1>Welcome {this.props.user.name}</h1>
           <IntroText />
-          <PersonalEntry backgroundColor="red" dataArray={this.props.user.projectExperience}/>
-          <PersonalEntry backgroundColor="green" dataArray={this.props.user.workExperience}/>
-          <PersonalEntry backgroundColor="blue" dataArray={this.props.user.hobbies}/>
-
+          <PersonalEntry color="rgb(255, 100, 100)" dataArray={this.props.user.projectExperience}/>
+          <PersonalEntry color="rgb(100, 255, 100)" dataArray={this.props.user.workExperience}/>
+          <PersonalEntry color="rgb(100, 100, 255)" dataArray={this.props.user.hobbies}/>
         </div>
       );
     } else {

@@ -67,9 +67,21 @@
 
 .content {
   display: flex;
-  flex-direction: center;
+  flex-direction: row;
   align-items: flex-start;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.personal-data-container {
+  width: 30%;
+  min-height: 250px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.personal-data-container h1 {
+  border-bottom: 2px solid white;
 }
 
 .border-red {
