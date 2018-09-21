@@ -14,11 +14,11 @@ class Router extends Component {
         <Switch>
           <Route exact
                   path="/tab1"
-                  component={props => ( <TabOne /> )} 
+                  component={props => ( <TabOne {...props}/> )}
             />
           <Route exact
                   path="/tab2"
-                  component={props => ( <TabTwo /> )} 
+                  component={props => ( <TabTwo {...props}/> )}
             />
         </Switch>
       </div>
