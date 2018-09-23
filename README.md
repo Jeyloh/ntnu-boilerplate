@@ -1,4 +1,6 @@
 
+## React Course @NTNU
+
 Dette er en React applikasjon som beskriver mange vanlige konsepter som
 
 - Components and the component Hierarchy
@@ -69,7 +71,7 @@ If you have any personal video files or images you want to showcase, you can cre
 Gallery.js which holds all your images. 
 
 
-### Onwards
+## Onwards
 
 [Link to tutorial: Hosting your React application with AWS in 30 minutes](https://itnext.io/hosting-your-react-application-with-aws-in-30-minutes-623f6539d92d)
 
