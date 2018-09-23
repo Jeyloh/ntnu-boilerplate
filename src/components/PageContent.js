@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
-import {PersonalEntry} from "./PersonalEntry";
-import {LoadingSpinner} from "./LoadingSpinner";
+import React, { Component } from 'react'
+import { PersonalEntry } from './PersonalEntry'
+import { LoadingSpinner } from './LoadingSpinner'
 import IntroText from './IntroText'
 
 class PageContent extends Component {
 
-  render() {
-    console.log(this.props);
+  render () {
+    console.log(this.props)
     if (this.props.loading) {
-      return <LoadingSpinner />
+      return <LoadingSpinner/>
     }
     else if (this.props.user) {
       return (
         <div className="content">
-          <h1>Welcome {this.props.user.name}</h1>
           <IntroText />
-          <PersonalEntry color="rgb(255, 100, 100)" dataArray={this.props.user.projectExperience}/>
-          <PersonalEntry color="rgb(100, 255, 100)" dataArray={this.props.user.workExperience}/>
-          <PersonalEntry color="rgb(100, 100, 255)" dataArray={this.props.user.hobbies}/>
+          <h3>Experience</h3>
+          <div className="personal-data-wrapper">
+            <PersonalEntry color="rgb(255, 100, 100)" dataArray={this.props.user.projectExperience}/>
+            <PersonalEntry color="rgb(100, 255, 100)" dataArray={this.props.user.workExperience}/>
+            <PersonalEntry color="rgb(100, 100, 255)" dataArray={this.props.user.hobbies}/>
+          </div>
         </div>
-      );
+      )
     } else {
       return (
         <div>
@@ -28,8 +30,8 @@ class PageContent extends Component {
         </div>
       )
     }
-   
+
   }
 }
 
-export default PageContent;
+export default PageContent

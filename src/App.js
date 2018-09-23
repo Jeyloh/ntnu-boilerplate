@@ -6,11 +6,30 @@ import { myPersonalInformation } from "./personal_information"
 
 class App extends Component {
   constructor(props) {
+    console.log(">> constructor");
     super(props);
     this.state = {
       user: null,
       loading: false
     }
+  }
+
+  /**
+   * A simple showcase of the LifeCycle methods
+   */
+  componentDidMount() {
+    console.log(">> componentDidMount");
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(">> shouldComponentUpdate");
+    console.log(nextProps, nextState);
+    return true;
+  }
+  componentDidUpdate() {
+    console.log(">> componentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log(">> componentWillUnmount");
   }
 
   loginUser = () => {
@@ -25,6 +44,8 @@ class App extends Component {
   }
 
   render() {
+    console.log(">> render");
+
     return (
       <div className="app">
         <Header user={this.state.user}/>

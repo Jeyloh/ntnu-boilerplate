@@ -1,5 +1,8 @@
 export const myPersonalInformation = {
-  name: "My Name", 
+  name: "My Name",
+  description: "Web developer by day, beer-drinker at night",
+  age: "",
+  profileImgSrc: "./createIT.png",
   projectExperience: [
     {
       title: "Familiekalenderen",
@@ -16,8 +19,8 @@ export const myPersonalInformation = {
       description: "Software Engineer, mainly focused on the front-end side of things. Also experienced in Java Spring and AWS Cloud services"
     },
     {
-      title: "NorgesEnergi",
-      description: "Javascript fire extinguisher, finder of flaws, implementor of Angular."
+      title: "Hansen CreateIT",
+      description: "Freelance web developer at my own company."
     },
   ],
   hobbies: [
