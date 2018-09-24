@@ -20,10 +20,6 @@
   font-weight: 600;
 }
 
-.app-intro {
-  font-size: large;
-}
-
 .flex-parent {
   padding: 20px;
   width: 100%;
@@ -34,12 +30,6 @@
 
 .flex-child {
   flex: 1;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.flex-right {
-  display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
@@ -91,6 +81,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -104,6 +95,15 @@
 .personal-data-container {
   padding: 20px;
   color: white;
+  position: relative;
+}
+
+.personal-data-container .category-tag {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.9)
 }
 
 @media only screen and (max-width: 810px) {
@@ -185,13 +185,13 @@
 }
 
 .border-red {
-  border: 1px solid rgb(255, 100, 100);
+  border: 1px dashed rgb(255, 100, 100);
 }
 .border-green {
-  border: 1px solid rgb(100, 255, 100);
+  border: 1px dashed rgb(100, 255, 100);
 }
 .border-blue {
-  border: 1px solid rgb(100, 100, 255);
+  border: 1px dashed rgb(100, 100, 255);
 }
 
 @keyframes App-logo-spin {

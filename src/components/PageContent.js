@@ -19,9 +19,9 @@ class PageContent extends Component {
                          age={this.props.user.age}
                          name={this.props.user.name}
                          profileImgSrc={personalLogo}/>
-            <PersonalEntry color="rgb(255, 100, 100)" dataArray={this.props.user.projectExperience}/>
-            <PersonalEntry color="rgb(100, 255, 100)" dataArray={this.props.user.workExperience}/>
-            <PersonalEntry color="rgb(100, 100, 255)" dataArray={this.props.user.hobbies}/>
+            <PersonalEntry color="rgb(255, 100, 100)" dataArray={this.props.user.projectExperience} category="project"/>
+            <PersonalEntry color="rgb(100, 255, 100)" dataArray={this.props.user.workExperience} category="work"/>
+            <PersonalEntry color="rgb(100, 100, 255)" dataArray={this.props.user.hobbies} category="hobby"/>
           </div>
         </div>
       )

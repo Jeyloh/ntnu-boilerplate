@@ -9,6 +9,7 @@ export const PersonalEntry = (props) => {
         <div key={title} style={{backgroundColor: props.color}} className="personal-data-container">
           <h1>{title}</h1>
           <p>{description}</p>
+          <span className="category-tag">#{props.category}</span>
         </div>
       ))
       : null
