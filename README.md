@@ -58,17 +58,18 @@ Array.map( (arrayItem) => {
 })
 ```
 
-
 Currently, we have displayed conditional data based on the Application state. Try to
 install React Router and implement a tab view in your application. You can see how this
 implementation is done in this projects ```/src/components/TabRouting``` folder. 
 
-- Installing React Router: ``` npm install -save react-router-dom```
+- Installing React Router: ``` npm install --save react-router-dom```
 - Importing it to your application: ``` import { BrowserRouter } from "react-router-dom"```
 
-
 If you have any personal video files or images you want to showcase, you can create a
-Gallery.js which holds all your images. 
+Gallery.js (or use the one provided) which holds all your images. We've created a css class 
+for this, gallery-container, which you can use to get a grid of squares.
+You can see how this implementation is done in this projects ```/src/components/Gallery``` folder. 
+Try to place this gallery wherever in your content you want. 
 
 
 ## Onwards
