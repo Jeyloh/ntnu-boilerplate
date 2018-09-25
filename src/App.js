@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from './redux/store/store';
 import './App.css';
 import Header from './components/Header';
 import PageContent from './components/PageContent';
@@ -51,7 +49,6 @@ class App extends Component {
         console.log('>> render');
 
         return (
-            <Provider store={store}>
                 <div className="app">
                     <Header user={this.state.user} />
                     <PageContent
@@ -60,7 +57,6 @@ class App extends Component {
                         loading={this.state.loading}
                     />
                 </div>
-            </Provider>
         );
     }
 }

@@ -68,13 +68,12 @@ class PageContent extends Component {
 
 // Connecting the component to Redux:
 // The state is filled by "images", and "fetchInstagram" is the action from instagram-action.js"
-export default connect(
-    state => {
-        return {
-            images: state.instagramReducer
-        };
-    },
-    {
-        fetchInstagram
-    }
-)(PageContent);
+const mapStateToProps = (state) => ({
+      images: state.instagramReducer
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    fetchInstagram: () => dispatch(fetchInstagram())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageContent);
