@@ -166,17 +166,16 @@
 .gallery-container {
     width: 100%;
     display: grid;
-    grid-template-rows: 100px 100px 100px;
-    grid-template-columns: 100px 100px 100px;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
 }
 
 /**
   Set styling for squares inside the grid. Size is handled in the parent container gallery-container
  */
-.gallery-container img,
-.gallery-container div {
+.gallery-container .displayed-img {
     background: #222;
     display: flex;
     align-items: center;

@@ -84,13 +84,10 @@ We also added empty functions for setting the User state object in the store.
 
 ### Tasks
 
-#### Test the Instagram function created in Redux 
+#### Check the Instagram logs created in by Redux 
 
 Open the DevTools (F12) and refresh the website. We've added Redux-Logger to log every state update in Redux. Open the objects
 that's being logged (prevState, current, nextState) and try to see how the store is being updated in each log.
-
-Go to the Redux Action fetchInstagram and check out the API call to Instagram. Replace the URL with another Instagram account.
-See how this updates your application.
 
 
 #### Implement User in the Redux store 
@@ -136,7 +133,7 @@ This is an implementation of the function you can use in your React component.
 Create a button in the form which invokes the action ```<button onClick={storeMessage}```. stores the current message in 
 your Reducer "messages" array. 
 
-Make sure to display data from the Redux store "messages" array: 
+Make sure to display data from the Redux store "messages" array in a React component (the same way we did with instagram and user)
 ```
 store: {
     messages: [
@@ -146,7 +143,7 @@ store: {
     
 ```
 
-## Onwards
+## Hosting to AWS
 
 [Link to tutorial: Hosting your React application with AWS in 30 minutes](https://itnext.io/hosting-your-react-application-with-aws-in-30-minutes-623f6539d92d)
 

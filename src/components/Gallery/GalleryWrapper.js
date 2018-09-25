@@ -6,15 +6,23 @@ class GalleryWrapper extends Component {
     console.log(this.props)
     return (
       <div className="gallery-container">
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
-        <div>add img</div>
+        {
+          this.props.gallery.map(
+            image => {
+              return (
+                  <img
+                    key={image.node.display_url}
+                    className="displayed-img"
+                    src={
+                      image.node.display_url
+                    }
+                    width={150}
+                    alt=""
+                  />
+              );
+            }
+          )
+        }
       </div>
     )
   }

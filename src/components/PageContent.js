@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchInstagram } from '../actions/instagram-action';
+import { fetchInstagram } from '../redux/actions/instagram-action';
 import { PersonalEntry } from './PersonalEntry';
 import { LoadingSpinner } from './LoadingSpinner';
 import IntroText from './IntroText';
 import { ProfileCard } from './ProfileCard';
 import personalLogo from '../profile.png';
+import GalleryWrapper from './Gallery/GalleryWrapper'
 
 class PageContent extends Component {
     componentDidMount() {
@@ -42,28 +43,12 @@ class PageContent extends Component {
                             category="hobby"
                         />
                     </div>
-                    <div className="content">
-                        Jørgens insta
-                        <ul className="instagram-bilder">
-                            {this.props.images.data
-                                ? this.props.images.data.graphql.user.edge_owner_to_timeline_media.edges.map(
-                                      image => {
-                                          return (
-                                              <li>
-                                                  <img
-                                                      src={
-                                                          image.node.display_url
-                                                      }
-                                                      alt=""
-                                                      width="200"
-                                                  />
-                                              </li>
-                                          );
-                                      }
-                                  )
-                                : null}
-                        </ul>
-                    </div>
+                  <h4>Instagram feed</h4>
+                  {
+                    this.props.images.data && this.props.images.data.graphql
+                      ? <GalleryWrapper gallery={this.props.images.data.graphql.user.edge_owner_to_timeline_media.edges}/>
+                      : null
+                  }
                 </div>
             );
         } else {
@@ -81,6 +66,8 @@ class PageContent extends Component {
     }
 }
 
+// Connecting the component to Redux:
+// The state is filled by "images", and "fetchInstagram" is the action from instagram-action.js"
 export default connect(
     state => {
         return {
